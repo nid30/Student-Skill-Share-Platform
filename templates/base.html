@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SkillShare Platform</title>
+
+  <!-- Bootstrap FIRST -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Google Font (optional, looks nicer) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Your CSS LAST so it overrides Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="theme-body">
+<nav class="navbar navbar-expand-lg theme-navbar">
+  <a class="navbar-brand ms-3" href="/">SkillShare</a>
+  <div class="navbar-nav">
+    <a class="nav-link" href="/mentors">Mentors</a>
+    <a class="nav-link" href="/leaderboard">Leaderboard</a>
+    <a class="nav-link" href="/feedback">Feedback</a>
+    <a class="nav-link" href="/schedule">Schedule</a>
+    <a class="nav-link" href="/sessions">All Sessions</a>
+    <a class="nav-link" href="/notifications/1">Notifications</a>
+  </div>
+</nav>
+
+<main class="container page-wrap py-4">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} shadow-sm themed-alert">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <div class="panel shadow-sm p-4">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+
+<footer class="theme-footer">
+  © 2025 SkillShare • Team 3 — Maya Bhagath &amp; Nidhi Nitin Nag
+</footer>
+
+<script>
+  setTimeout(() => document.querySelectorAll('.alert').forEach(el => el.style.display = 'none'), 4000);
+</script>
+</body>
+</html>

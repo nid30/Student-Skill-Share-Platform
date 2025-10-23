@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mb-4">Schedule a Mentorship Session</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label>Mentor:</label>
+    <select name="mentor_id" class="form-control" required>
+      {% for m in mentors %}
+      <option value="{{ m.student_id }}">{{ m.first_name }} {{ m.last_name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Mentee:</label>
+    <select name="mentee_id" class="form-control" required>
+      {% for me in mentees %}
+      <option value="{{ me.student_id }}">{{ me.first_name }} {{ me.last_name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Skill:</label>
+    <select name="skill_id" class="form-control" required>
+      {% for s in skills %}
+      <option value="{{ s.skill_id }}">{{ s.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Schedule Time:</label>
+    <input type="datetime-local" name="schedule_time" class="form-control" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Request Session</button>
+</form>
+{% endblock %}

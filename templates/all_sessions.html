@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mb-4">All Mentorship Sessions</h2>
+{% if sessions %}
+<table class="table table-bordered">
+  <thead class="table-light">
+    <tr>
+      <th>ID</th><th>Mentor</th><th>Mentee</th><th>Skill</th>
+      <th>Status</th><th>Schedule Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in sessions %}
+    <tr>
+      <td>{{ s.session_id }}</td>
+      <td>{{ s.mentor_name }}</td>
+      <td>{{ s.mentee_name }}</td>
+      <td>{{ s.skill }}</td>
+      <td>{{ s.status }}</td>
+      <td>{{ s.schedule_time }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No sessions yet!</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mb-4">🏆 Top-Rated Mentors</h2>
+{% if leaders %}
+<table class="table table-bordered">
+  <thead class="table-light">
+    <tr>
+      <th>ID</th><th>Name</th><th>Department</th><th>Average Rating</th><th>Reviews</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for l in leaders %}
+    <tr>
+      <td>{{ l.student_id }}</td>
+      <td>{{ l.first_name }} {{ l.last_name }}</td>
+      <td>{{ l.department }}</td>
+      <td>{{ l.avg_rating }}</td>
+      <td>{{ l.reviews }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No mentor feedback yet!</p>
+{% endif %}
+{% endblock %}

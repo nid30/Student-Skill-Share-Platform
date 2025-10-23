@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+  <h1>Welcome to the Skill-Share Platform </h1>
+  <p class="lead mt-3">
+    Connect juniors and seniors for mentorship and skill-building.
+  </p>
+
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <div class="card shadow-sm p-3">
+        <h4>Find Mentors</h4>
+        <p>Browse senior students skilled in your areas of interest.</p>
+        <a href="/mentors" class="btn btn-primary">View Mentors</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm p-3">
+        <h4>Schedule Session</h4>
+        <p>Request a mentorship session and learn from seniors.</p>
+        <a href="/schedule" class="btn btn-success">Schedule</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm p-3">
+        <h4>Leaderboard</h4>
+        <p>See the top-rated mentors based on student feedback.</p>
+        <a href="/leaderboard" class="btn btn-warning">Leaderboard</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

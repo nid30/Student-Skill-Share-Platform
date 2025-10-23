@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mb-4">Notifications</h2>
+{% if notes %}
+<table class="table table-striped">
+  <thead>
+    <tr><th>Message</th><th>Time</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    {% for n in notes %}
+    <tr>
+      <td>{{ n.message }}</td>
+      <td>{{ n.created_at }}</td>
+      <td>{{ n.status }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="text-center mt-3">No notifications found.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mb-4">Available Mentors</h2>
+{% if mentors %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th><th>Name</th><th>Department</th><th>Year</th><th>Rating</th><th>Skills</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for m in mentors %}
+    <tr>
+      <td>{{ m.student_id }}</td>
+      <td>{{ m.first_name }} {{ m.last_name }}</td>
+      <td>{{ m.department }}</td>
+      <td>{{ m.year }}</td>
+      <td>{{ m.avg_rating }}</td>
+      <td>{{ m.skills }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No mentors found!</p>
+{% endif %}
+{% endblock %}

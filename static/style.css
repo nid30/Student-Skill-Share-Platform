@@ -1,0 +1,142 @@
+/* ========== GLOBAL COLORS ========== */
+:root {
+  --deep-brick: #822f23;
+  --coral: #d67d63;
+  --soft-pink: #f1a19d;
+  --olive-gold: #a1945f;
+  --cream: #f6efdb;
+}
+
+/* ========== BODY & BACKGROUND ========== */
+body {
+  background-color: var(--cream);
+  color: #2e2e2e;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background-color: var(--deep-brick);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--cream) !important;
+}
+
+.nav-link {
+  color: var(--cream) !important;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--soft-pink) !important;
+}
+
+/* ========== CARDS ========== */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--soft-pink);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--coral);
+  transform: translateY(-5px);
+}
+
+/* ========== BUTTONS ========== */
+.btn-primary {
+  background-color: var(--deep-brick);
+  border-color: var(--deep-brick);
+}
+
+.btn-primary:hover {
+  background-color: var(--coral);
+  border-color: var(--coral);
+}
+
+.btn-success {
+  background-color: var(--olive-gold);
+  border-color: var(--olive-gold);
+}
+
+.btn-success:hover {
+  background-color: var(--coral);
+  border-color: var(--coral);
+}
+
+.btn-warning {
+  background-color: var(--deep-brick);
+  color: #fff;
+  border-color: var(--deep-brick);
+}
+
+.btn-warning:hover {
+  background-color: var(--coral);
+  border-color: var(--coral);
+}
+
+/* ========== TABLES ========== */
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: var(--olive-gold);
+  color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f4ed;
+}
+
+/* ========== FORMS ========== */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 0.2rem rgba(214, 125, 99, 0.25);
+}
+
+/* ========== ALERTS ========== */
+.alert-success {
+  background-color: var(--soft-pink);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+.alert-danger {
+  background-color: var(--deep-brick);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ========== HEADERS & TITLES ========== */
+h1, h2, h3, h4 {
+  color: var(--deep-brick);
+  font-weight: 600;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  background-color: var(--deep-brick);
+  color: var(--cream);
+  padding: 15px;
+  margin-top: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
