@@ -1,8 +1,8 @@
-# Student Skill-Share & Mentorship Platform 🤝
+# Student Skill-Share & Mentorship Platform 
 
 A web-based platform designed to connect junior and senior students at PESU for mentorship and skill-sharing. This project aims to foster a collaborative and supportive environment within the university, allowing students to easily find and connect with peers for academic and technical guidance.
 
-## ✨ Key Features
+##  Key Features
 
 -   **User Profiles:** Students can create detailed profiles listing their major, year, courses taken, and skills they possess or wish to learn.
 -   **Advanced Mentor Search:** A powerful search engine to find mentors based on criteria like skills, department, or academic year.
@@ -11,13 +11,13 @@ A web-based platform designed to connect junior and senior students at PESU for 
 -   **Feedback and Rating:** A two-way feedback system where both mentors and mentees can rate and review each other after a session. A mentor's average rating is automatically updated.
 -   **Analytics Dashboard:** Features leaderboards for top-rated mentors and a personal dashboard for users to view their mentorship history.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 -   **Backend:** Python (likely using a framework like Flask or Django)
 -   **Database:** SQL
 -   **Frontend:** HTML, CSS
 
-## ⚙️ Setup and Installation
+##  Setup and Installation
 
 To get a local copy up and running, follow these simple steps.
 
@@ -48,7 +48,7 @@ To get a local copy up and running, follow these simple steps.
     python app.py
     ```
 
-## 📂 Folder Structure
+##  Folder Structure
 ├── SQL Files/        # Contains all .sql files for database schema, triggers, etc.
 ├── static/           # Contains static assets like CSS and JavaScript files.
     └── style.css
